@@ -1,0 +1,329 @@
+/* Base styles */
+.body2 {
+  background-image: url(../public/24.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+    width: 500px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+   .login-card {
+  width: 100%;
+  max-width: 600px; /* Increased width */
+  padding: 1rem 2rem; /* Decreased vertical padding, more horizontal */
+  border-radius: 12px;
+  
+  
+}
+  
+
+  
+  /* Header styles */
+  .login-header {
+    text-align:center;
+    margin-bottom: 1.2rem;
+  }
+  
+  .login-header .logo {
+    margin-bottom: 1.25rem;
+  }
+  
+  .login-header .logo svg {
+    width: 48px;
+    height: 48px;
+    fill: #000000;
+  }
+  
+  .login-header h2 {
+  color: #1e293b;
+  margin-top: -30px;     /* Pull it up even more */
+  margin-bottom: 1.5rem; /* Increase space below */
+  font-size: 2.3rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+  .login-header p {
+    color: #64748b;
+    font-size: 0.9375rem;
+    margin-bottom: 2rem;
+    margin-top: -20px; 
+    
+  }
+  
+  /* Error message */
+  .error-message {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem;
+    margin-bottom: 1.5rem;
+    background-color: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    font-size: 0.875rem;
+  }
+  
+  .error-message svg {
+    flex-shrink: 0;
+    fill: #ef4444;
+  }
+  
+  /* Form styles */
+  .form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #334155;
+    font-weight: 500;
+    font-size: 0.875rem;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 0.9375rem;
+    transition: all 0.2s ease;
+    background-color: #f8fafc;
+  }
+  
+  .form-group input:focus {
+    border-color: #080808 !important;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.3);
+    background-color: white;
+  }
+  
+  .form-group small {
+    display: block;
+    margin-top: 0.25rem;
+    color: #262728;
+    font-size: 0.75rem;
+  }
+  
+  /* Password input */
+  .password-input {
+    position: relative;
+  }
+  
+  .password-input input {
+    padding-right: 3rem;
+  }
+  
+  .toggle-password {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 0.25rem;
+    cursor: pointer;
+    color: #64748b;
+  }
+  
+  .toggle-password:hover {
+    color: #334155;
+  }
+  
+  .toggle-password svg {
+    display: block;
+  }
+  
+  /* Form options */
+  .form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .remember-me {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .remember-me input {
+    width: 1rem;
+    height: 1rem;
+    accent-color: #000000;
+  }
+  
+  .remember-me label {
+    color: #334155;
+    cursor: pointer;
+  }
+  
+  .forgot-password {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .forgot-password:hover {
+    text-decoration: underline;
+  }
+  
+  /* Login button */
+  .login-button {
+    width: 100%;
+    padding: 0.875rem;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .login-button:hover {
+    background-color: #4c4b4b;
+  }
+  
+  .login-button:disabled {
+    background-color: #26282b;
+    cursor: not-allowed;
+  }
+  
+  .spinner {
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  /* Social login */
+  .social-login {
+    display: flex;
+    margin: 2rem 0;
+    justify-content: center;
+  }
+  
+  .divider {
+    display: flex;
+    align-items: center;
+    color: #64748b;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+  }
+  
+  .divider::before,
+  .divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .divider::before {
+    margin-right: 1rem;
+  }
+  
+  .divider::after {
+    margin-left: 1rem;
+  }
+  
+  .social-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+  
+  .social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-left: -0.5rem;
+    padding: 0.75rem;
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .social-button:hover {
+    background-color: #f8fafc;
+  }
+  
+  .social-button.google {
+    color: #1e293b;
+  }
+  
+  .social-button.github {
+    color: #1e293b;
+  }
+  
+  .social-button svg {
+    flex-shrink: 0;
+  }
+  
+  /* Signup link */
+  .signup-link {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #64748b;
+    font-size: 0.875rem;
+  }
+  
+  .signup-link a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .signup-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 480px) {
+    .login-card {
+      padding: 1.75rem;
+    }
+    
+    .social-buttons {
+      grid-template-columns: 1fr;
+    }
+  }
+  .google-button{
+    margin-left: 100px;
+    width: 200px;
+  }

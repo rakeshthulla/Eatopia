@@ -1,0 +1,32 @@
+/* Legal.css */
+.legal-container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 40px;
+  background: #fff;
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  color: #2b2b2b;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.legal-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.legal-container h2 {
+  margin-top: 2rem;
+  color: #506046;
+}
+
+.legal-container p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 1rem;
+}
+
+.legal-container a {
+  color: #2a4434;
+  text-decoration: underline;
+}
