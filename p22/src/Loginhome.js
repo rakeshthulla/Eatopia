@@ -19,7 +19,7 @@ const Navbar = () => {
       if (!userId || !token) return;
       try {
         const res = await axios.get(
-          `http://localhost:8000/api/auth/user/${userId}`,
+          `https://eatopia-avc6.onrender.com/api/auth/user/${userId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
