@@ -213,7 +213,7 @@ const GoalWeightWizard = () => {
       cleanedData.foodPreferences = formData.foodPreferences.join(', ');
 
       try {
-        const response = await fetch("http://localhost:8000/api/goal", {
+        const response = await fetch("https://eatopia-avc6.onrender.com/api/goal", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
