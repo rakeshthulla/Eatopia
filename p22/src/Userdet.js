@@ -68,14 +68,14 @@ import React, { useState, useEffect } from 'react';
       const fetchData = async () => {
         try {
           const userRes = await axios.get(
-            `http://localhost:8000/api/auth/user/${userId}`,
+            `https://eatopia-avc6.onrender.com/api/auth/user/${userId}`,
             { headers: { Authorization: `Bearer ${token}` } }
           );
           setUserData(userRes.data);
           console.log("User data retrieved:", userRes.data); // <-- Add this line
 
           const goalRes = await axios.get(
-            `http://localhost:8000/api/goal/user/${userId}`,
+            `https://eatopia-avc6.onrender.com/api/goal/user/${userId}`,
             { headers: { Authorization: `Bearer ${token}` } }
           );
           setGoalData(goalRes.data);
@@ -194,7 +194,7 @@ import React, { useState, useEffect } from 'react';
         }
 
         await axios.put(
-          `http://localhost:8000/api/auth/user/${userId}`,
+          `https://eatopia-avc6.onrender.com/api/auth/user/${userId}`,
           {
             username: editData.username,
             gender: editData.gender,
@@ -208,7 +208,7 @@ import React, { useState, useEffect } from 'react';
         );
 
         await axios.put(
-          `http://localhost:8000/api/goal/${userId}`,
+          `https://eatopia-avc6.onrender.com/api/goal/${userId}`,
           {
             goal: editData.goal,
             currentWeight: parseFloat(editData.currentWeight),
@@ -227,13 +227,13 @@ import React, { useState, useEffect } from 'react';
 
         // Fetch updated user and goal data
         const userRes = await axios.get(
-  `http://localhost:8000/api/auth/user/${userId}`,
+  `https://eatopia-avc6.onrender.com/api/auth/user/${userId}`,
   { headers: { Authorization: `Bearer ${token}` } }
 );
 setUserData(userRes.data);
 
 const goalRes = await axios.get(
-  `http://localhost:8000/api/goal/user/${userId}`,
+  `https://eatopia-avc6.onrender.com/api/goal/user/${userId}`,
   { headers: { Authorization: `Bearer ${token}` } }
 );
 setGoalData(goalRes.data);
