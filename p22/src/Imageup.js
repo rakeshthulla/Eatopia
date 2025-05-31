@@ -78,7 +78,7 @@ const ImageUpload = () => {
 
     try {
       const token = localStorage.getItem("authToken");
-      const response = await fetch("http://localhost:8000/api/food-history/add", {
+      const response = await fetch("https://eatopia-avc6.onrender.com/api/food-history/add", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
