@@ -13,7 +13,7 @@ GOOGLE_API_KEY = os.getenv("GEMINI_API_KEY")
 if not GOOGLE_API_KEY:
     raise ValueError("❌ GOOGLE_API_KEY is not set in the environment!")
 
-AUTH_SERVER_URL = "http://localhost:8000/api/auth/user"  # Base URL for the auth server
+AUTH_SERVER_URL = "https://eatopia-h5am.onrender.com/api/auth/user"  # Base URL for the auth server
 
 genai.configure(api_key=GOOGLE_API_KEY)
 model = genai.GenerativeModel("models/gemini-1.5-flash")
