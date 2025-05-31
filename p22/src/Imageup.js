@@ -134,7 +134,7 @@ const ImageUpload = () => {
       const formData = new FormData();
       formData.append("image", selectedImage);
 
-      const res = await fetch("http://localhost:5000/upload", {
+      const res = await fetch("https://eatopia-h5am.onrender.com/upload", {
         method: "POST",
         body: formData,
       });
