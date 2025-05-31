@@ -52,7 +52,7 @@ const LoginPage = () => {
       }
 
       // Send login request to the backend
-      const res = await axios.post('http://localhost:8000/api/auth/login', formData);
+      const res = await axios.post('https://eatopia-avc6.onrender.com/api/auth/login', formData);
 
       // Validate response
       if (!res.data.token || !res.data.userId) {
@@ -74,7 +74,7 @@ const LoginPage = () => {
   };
 
   const handleGoogleLogin = () => {
-    window.location.href = 'http://localhost:8000/api/auth/google'; // // Redirect to Google login
+    window.location.href = 'https://eatopia-avc6.onrender.com/api/auth/google'; // // Redirect to Google login
   };
 
   return (
