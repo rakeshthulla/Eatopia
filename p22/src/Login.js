@@ -170,7 +170,7 @@ const LoginPage = () => {
           <div className="social-login">
             <div className="social-buttons">
               <a
-                href="http://localhost:8000/api/auth/google"
+                href="https://eatopia-avc6.onrender.com/api/auth/google"
                 className="social-button google-button"
                 onClick={handleGoogleLogin}
               >
