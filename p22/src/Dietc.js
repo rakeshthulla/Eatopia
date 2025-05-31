@@ -31,7 +31,7 @@ function FoodHistoryByDate() {
     try {
       const formattedDate = formatLocalDate(date);
       const response = await axios.get(
-        `http://localhost:8000/api/food-history?userId=${userId}&date=${formattedDate}`,
+        `https://eatopia-avc6.onrender.com/api/food-history?userId=${userId}&date=${formattedDate}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -50,7 +50,7 @@ function FoodHistoryByDate() {
     if (!userId || !token) return;
     try {
       const response = await axios.get(
-        `http://localhost:8000/api/auth/user/${userId}`,
+        `https://eatopia-avc6.onrender.com/api/auth/user/${userId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -68,7 +68,7 @@ function FoodHistoryByDate() {
     if (!window.confirm('Are you sure you want to delete this food item?')) return;
     try {
       await axios.delete(
-        `http://localhost:8000/api/food-history/${id}`,
+        `https://eatopia-avc6.onrender.com/api/food-history/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -200,7 +200,7 @@ function FoodHistoryByDate() {
             <div key={index} className="food-card">
               {item.imageUrl && (
                 <img
-                  src={`http://localhost:8000${item.imageUrl}`}
+                  src={`https://eatopia-avc6.onrender.com${item.imageUrl}`}
                   alt={item.foodName}
                   className="food-img"
                 />
